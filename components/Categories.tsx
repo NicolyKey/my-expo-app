@@ -27,8 +27,9 @@ export default function Categories() {
                                 >
                                     <Image style={{ width: 45, height: 45 }}
                                         source={category.image} />
-                                    <Text className={`text-sm ${textClass}`} >{category.name}</Text>
+
                                 </TouchableOpacity>
+                                <Text className={`text-sm ${textClass}`} >{category.name}</Text>
                             </View>
                         )
                     })

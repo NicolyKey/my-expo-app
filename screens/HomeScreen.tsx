@@ -3,12 +3,14 @@ import { View, Text, TextInput, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Feather } from '@expo/vector-icons'
 import Categories from 'components/Categories'
+import { featured } from '../constants'
+import FeaturedRow from 'components/FeaturedRow'
 
 export default function HomeScreen() {
 
     return (
         <SafeAreaView className='bg-white py-6'>
-            <StatusBar barStyle="dark-content" />
+            <StatusBar style="dark" />
             <View className="flex-row items-center space-x-2 px-4 pb-2">
                 <View className='flex-row flex-1 items-center p-3 rounded-full border border-gray-300' >
                     <Feather name="search" size={25} color="gray" />
@@ -25,10 +27,27 @@ export default function HomeScreen() {
 
             {/* Main */}
             <ScrollView showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 contentContainerStyle={{
                     paddingBottom: 20
                 }}>
+                {/*categories*/}
                 <Categories />
+                <View className='mt-5'>
+                    {
+                        [featured, featured, featured].map((item, index) => {
+                            return (
+                                <FeaturedRow
+                                    key={index}
+                                    title={item.title}
+                                    restaurants={item.restaurants}
+                                    description={item.description}
+                                />
+
+                            )
+                        })
+                    }
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
