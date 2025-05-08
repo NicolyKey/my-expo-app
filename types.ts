@@ -19,4 +19,5 @@ export type RootStackParamList = {
             image: any;
         }[];
     };
+    Cart: undefined;
 };
