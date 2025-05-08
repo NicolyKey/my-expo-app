@@ -1,70 +1,80 @@
 <h1 align="center">🍔 FoodDelivery App</h1>
 
 <p align="center">
-  Um aplicativo de <strong>Delivery de Comida</strong> feito com <strong>React Native + Expo</strong> utilizando <strong>NativeWind</strong> para estilização moderna com Tailwind CSS.
+  Um aplicativo moderno de <strong>Delivery de Comida</strong> construído com <strong>React Native</strong>, <strong>Expo</strong> e <strong>NativeWind</strong> (Tailwind CSS para React Native).
 </p>
 
 <hr />
 
 <h2>📱 Tecnologias Utilizadas</h2>
 <ul>
-  <li>React Native</li>
-  <li>Expo</li>
-  <li>NativeWind (Tailwind CSS para React Native)</li>
-  <li>TypeScript (opcional)</li>
+  <li><strong>React Native</strong> – Framework para apps nativos com React</li>
+  <li><strong>Expo</strong> – Plataforma para desenvolvimento rápido de apps</li>
+  <li><strong>NativeWind</strong> – Tailwind CSS adaptado para React Native</li>
+  <li><strong>TypeScript</strong> – Tipagem opcional, mas recomendada</li>
 </ul>
 
 <h2>🚀 Funcionalidades</h2>
 <ul>
-  <li>🛍️ Listagem de restaurantes e pratos</li>
-  <li>📦 Carrinho de compras</li>
-  <li>💳 Tela de checkout e pagamento</li>
-  <li>🗺️ Rastreio do pedido em tempo real</li>
+  <li>🔍 Listagem de restaurantes e pratos</li>
+  <li>🛒 Adição ao carrinho e gerenciamento de pedidos</li>
+  <li>📍 Rastreamento em tempo real do pedido</li>
 </ul>
 
-<h2>📸 Preview</h2>
-<p>
-  <em>Adicione aqui prints do aplicativo em funcionamento para ilustrar.</em><br />
-  <img src="https://via.placeholder.com/300x600?text=App+Screenshot+1" alt="Preview 1" />
-  <img src="https://via.placeholder.com/300x600?text=App+Screenshot+2" alt="Preview 2" />
-</p>
+<h2>⚙️ Como Rodar o Projeto</h2>
 
-<h2>🧰 Instalação</h2>
+<h3>1️⃣ Pré-requisitos</h3>
+<ul>
+  <li>Node.js (v16 ou superior)</li>
+  <li>Expo CLI instalado globalmente:</li>
+</ul>
 
-<pre>
-git clone https://github.com/seu-usuario/food-delivery-app.git
-cd food-delivery-app
-npm install
-npx expo start
-</pre>
+<pre><code>npm install -g expo-cli</code></pre>
+
+<h3>2️⃣ Clonar o projeto</h3>
+<pre><code>git clone [https://github.com/seu-usuario/food-delivery-app.git
+cd food-delivery-app](https://github.com/NicolyKey/my-expo-app.git)</code></pre>
+
+<h3>3️⃣ Instalar as dependências</h3>
+<pre><code>npm install</code></pre>
+
+<h3>4️⃣ Rodar o app com Expo</h3>
+<pre><code>npx expo start</code></pre>
+<p>Isso abrirá o Metro Bundler no navegador. Você pode:</p>
+<ul>
+  <li>📱 Escanear o QR Code com o app <strong>Expo Go</strong> no seu celular</li>
+  <li>🖥️ Executar em emulador Android/iOS (se configurado)</li>
+</ul>
 
 <h2>🎨 Estilização com NativeWind</h2>
-<p>Este projeto usa o <strong>NativeWind</strong>, que permite usar classes do Tailwind diretamente nos componentes React Native.</p>
-
-<pre>
-npm install nativewind
-</pre>
+<p>Este projeto usa o <strong>NativeWind</strong> para estilização com Tailwind. Instalação:</p>
+<pre><code>npm install nativewind</code></pre>
 
 <p>Configure no <code>babel.config.js</code>:</p>
-<pre>
-plugins: ["nativewind/babel"]
-</pre>
+<pre><code>plugins: ["nativewind/babel"]</code></pre>
+
+<p>Crie o arquivo <code>tailwind.config.js</code> com o conteúdo:</p>
+<pre><code>/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}</code></pre>
 
 <h2>📂 Estrutura de Pastas</h2>
 <pre>
 src/
-├── components/
-├── screens/
-├── navigation/
-├── assets/
-└── utils/
+├── components/      # Componentes reutilizáveis
+├── screens/         # Telas principais do app
+├── navigation      # Configuração de rotas
+├── assets/          # Imagens e fontes
+└── utils/           # Funções utilitárias
 </pre>
 
 <h2>🤝 Contribuindo</h2>
-<p>Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias!</p>
+<p>Contribuições são bem-vindas! Abra uma issue ou envie um pull request com melhorias ou correções.</p>
 
 <hr />
 
-<p align="center">
-  Feito com 💚 usando React Native + NativeWind
-</p>
