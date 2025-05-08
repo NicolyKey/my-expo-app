@@ -4,6 +4,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import Entypo from '@expo/vector-icons/Entypo';
 import { RootStackParamList } from '../types';
 import DishRow from 'components/DishRow';
+import CartIcon from 'components/CartIcon';
 
 type RestaurantRouteProp = RouteProp<RootStackParamList, 'Restaurant'>;
 
@@ -14,6 +15,7 @@ export default function Restaurant() {
 
     return (
         <View>
+            <CartIcon />
             <ScrollView>
                 <View className='relative'>
                     <Image className='w-full h-72' source={item.image} />
